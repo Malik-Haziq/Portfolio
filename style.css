@@ -1,0 +1,284 @@
+/* ====================  Variables  =============================== */
+:root {
+  --large-text: 2.4rem;
+  --medium-text: 2rem;
+  --normal-text: 1.8rem;
+  --h1: 8rem;
+  --h2: 6rem;
+  --h3: 3rem;
+  --h4: 2rem;
+  --image-width: 70rem;
+  --gutter-x-x-small: 1rem;
+  --gutter-x-small: 2rem;
+  --gutter-small: 5rem;
+  --gutter-normal: 7rem;
+  --gutter-midium: 9rem;
+  --gutter-huge: 12rem;
+  --box-padding: 3rem;
+  --background-color: rgb(245, 245, 245);
+
+  --box-border: 1px solid rgb(185, 185, 185);
+}
+/* =======================BASIC  SETTING=====================  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 63.5%;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  color: #333;
+}
+
+
+/* ===========================   Body   =============================== */
+
+body {
+  font-size: var(--normal-text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300px;
+  color: #f7f7f7;
+}
+
+/* =============================   TYPOGRAPHY  ============================== */
+p{
+  font-weight: 100; 
+  font-size: 2.2rem;
+  word-spacing: 5px;
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+  font-weight: 300;
+}
+
+h3 {
+  font-size: var(--h3);
+}
+h4{
+  font-size: var(--h4);
+}
+
+/* ==================================     HEADER     ================================ */
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.75)),
+    url(./images/mohammad-rahmani-LrxSl4ZxoRs-unsplash.jpg);
+
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 6rem;
+}
+
+/* ================================   TExt Area ===============================*/
+
+.text {
+  height: calc(100vh - 8rem);
+  display: flex;
+  align-items: center;
+  /* justify-self: center;*/
+}
+
+.text h1 {
+  font-weight: 100;
+}
+.text p {
+  font-size: var(--large-text);
+}
+
+/* ======================================   My WOrk   ================================= */
+
+.work {
+  margin: var(--gutter-huge) 0;
+}
+
+.work h2 {
+  margin-bottom: var(--gutter-small);
+}
+
+.work .list-img:not(:last-of-type) {
+  margin-bottom: var(--gutter-huge);
+}
+
+.list-img {
+  display: flex;
+  align-items: center;
+}
+
+.list-img .image {
+  max-width: var(--image-width);
+}
+
+.list-img .image img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 5px 40px rgb(160, 160, 160);
+}
+
+.list ul {
+  list-style-position: inside;
+  margin-right: var(--gutter-small);
+}
+
+.list h3 {
+  margin-bottom: var(--gutter-x-small);
+}
+
+
+
+
+/* ===============================   trusted  by =============================== */
+
+
+.trusted-by{
+  margin: var(--gutter-huge) 0;
+  background-color: var(--background-color);
+  height: 700px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.trusted-by .row h2{
+  margin: var(--gutter-small) 0;
+  /* padding: var(--gutter-small) 0; */
+  text-align: center;
+}
+.trusted-logos{
+  display: flex;
+  gap: 90px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.trusted-logos > img{
+  height: 45px;
+  width: 160px;
+  filter: grayscale(100%);
+}
+
+
+
+
+
+
+/* =================================   testimonials  ============================ */
+.testimonials-section{
+  margin: var(--gutter-huge) 0;
+
+}
+.testimonials-section .row h2{
+  
+  margin-bottom: var(--gutter-small);
+  /* padding: var(--gutter-normal) 0; */
+  text-align: center;
+}
+.testimonial{
+  display: flex;
+  gap: 30px;
+}
+.reviews{
+  max-width: 600px;
+  padding: var(--box-padding);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  border: var(--box-border);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 7%);
+}
+.reviews > img{
+  height: 200px;
+  width: 200px;
+  margin: var(--gutter-x-small);
+  border-radius: 50%;
+}
+.reviews > h3{
+  /* margin: var(--gutter-x-small); */
+
+}
+
+.reviews > h4{
+  font-weight: 500;
+}
+.reviews > p{
+  margin: var(--gutter-x-x-small) 0;
+  line-height: 30px;
+}
+
+
+/* ===========================   about Me   ============================== */
+
+
+.about-me{
+  margin: var(--gutter-huge) 0;
+  align-items: center;
+
+}
+.about-me .row h2{
+  margin-bottom: var(--gutter-small);
+  /* padding: var(--gutter-normal) 0; */
+  text-align: center;
+}
+.about{
+  max-width: 730px;
+  margin: 0 auto;
+  padding: var(--box-padding);
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border:  var(--box-border);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 7%);
+}
+
+
+.about img{
+  width: 300px;
+  height: 300px;
+  margin: var(--gutter-x-small);
+  border-radius: 50%;
+}
+
+.about p{
+  margin-bottom: var(--gutter-x-small);
+}
