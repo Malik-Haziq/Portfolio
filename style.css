@@ -1,37 +1,69 @@
-/* ====================  Variables  =============================== */
+/** ====================  Variables  ==================== */
 :root {
   --large-text: 2.4rem;
-  --medium-text: 2rem;
+  --medium-text: 2.2rem;
   --normal-text: 1.8rem;
   --h1: 8rem;
   --h2: 6rem;
-  --h3: 3rem;
+  --h3: 4rem;
   --h4: 2rem;
   --image-width: 70rem;
   --gutter-x-x-small: 1rem;
   --gutter-x-small: 2rem;
   --gutter-small: 5rem;
   --gutter-normal: 7rem;
-  --gutter-midium: 9rem;
+  --gutter-medium: 9rem;
   --gutter-huge: 12rem;
   --box-padding: 3rem;
   --background-color: rgb(245, 245, 245);
 
   --box-border: 1px solid rgb(185, 185, 185);
 }
-/* =======================BASIC  SETTING=====================  */
+@media (max-width: 980px) {
+  :root {
+    --gutter-huge: 10rem;
+  }
+}
+
+@media (max-width: 780px) {
+  :root {
+    --h1: 6rem;
+  }
+}
+
+/** =======================    BASIC  SETTING    =====================  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
-  font-size: 63.5%;
+  font-size: 62.5%;
 }
-
+@media (max-width: 1080px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 540px) {
+  html {
+    font-size: 50%;
+  }
+}
 .row {
   max-width: 1140px;
   margin: 0 auto;
+}
+@media (max-width: 1250px) {
+  .row {
+    padding: 0 var(--gutter-normal);
+  }
+}
+
+@media (max-width: 440px) {
+  .row {
+    padding: 0 var(--gutter-small);
+  }
 }
 
 a {
@@ -40,25 +72,63 @@ a {
 }
 
 section {
-  color: #333;
+  color: rgba(0, 0, 0, 0.75);
 }
 
+/** =============================   Reuseable Components   =================================== */
 
-/* ===========================   Body   =============================== */
+.btn {
+  font-size: var(--normal-text);
+  border: var(--box-border);
+  border-radius: 50px;
+  transition: 0.4s;
+}
+.btn-white {
+  font-size: var(--medium-text);
+  padding: 10px 40px;
+}
+.btn-white:hover {
+  background-color: var(--background-color);
+  color: rgb(22, 22, 22);
+}
+.btn-black {
+  background-color: rgb(22, 22, 22);
+  color: #f7f7f7;
+  padding: 10px 20px;
+}
+
+.btn-black:hover {
+  background-color: #f7f7f7;
+  color: rgb(22, 22, 22);
+}
+/** ===========================   Body   =============================== */
 
 body {
   font-size: var(--normal-text);
-  font-family: 'Jost', sans-serif;
-  font-weight: 300px;
+  font-family: "Jost", sans-serif;
   color: #f7f7f7;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: auto !important;
 }
 
-/* =============================   TYPOGRAPHY  ============================== */
-p{
-  font-weight: 100; 
-  font-size: 2.2rem;
+/** =============================   TYPOGRAPHY  ============================== */
+p {
+  font-size: var(--medium-text);
   word-spacing: 5px;
+  line-height: 35px;
 }
+@media (max-width: 720px) {
+  p {
+    line-height: 30px;
+    word-spacing: 3px;
+  }
+}
+/* @media (max-width: 620px) {
+  p {
+    line-height: 30px;
+    word-spacing: 3px;
+  }
+} */
 h1,
 h2,
 h3 {
@@ -68,19 +138,19 @@ h3 {
 h1 {
   font-size: var(--h1);
 }
+
 h2 {
   font-size: var(--h2);
-  font-weight: 300;
+  font-weight: 500;
 }
 
 h3 {
   font-size: var(--h3);
 }
-h4{
+h4 {
   font-size: var(--h4);
 }
-
-/* ==================================     HEADER     ================================ */
+/** ==================================     HEADER     ================================ */
 
 header {
   height: 100vh;
@@ -89,15 +159,21 @@ header {
 
   background-position: center;
   background-size: cover;
+  /* background-attachment: fixed; */
 }
 
 nav {
-  height: 8rem;
+  height: var(--gutter-huge);
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
+@media (max-width: 540px) {
+  nav {
+    justify-content: center;
+  }
+}
 nav ul {
   display: flex;
   justify-content: flex-end;
@@ -108,23 +184,49 @@ nav ul li:not(:last-child) {
   margin-right: 6rem;
 }
 
-/* ================================   TExt Area ===============================*/
+nav ul li a {
+  position: relative;
+}
+
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom left;
+  transition: transform 0.2s ease-out;
+}
+
+nav ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/** =====================   Text Area ===================*/
 
 .text {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 12rem);
   display: flex;
   align-items: center;
-  /* justify-self: center;*/
 }
 
 .text h1 {
-  font-weight: 100;
-}
-.text p {
-  font-size: var(--large-text);
+  font-weight: 350;
+  line-height: 1;
+  margin-bottom: var(--gutter-x-small);
 }
 
-/* ======================================   My WOrk   ================================= */
+.text p {
+  font-size: var(--large-text);
+  font-weight: 300;
+  color: #f7f7f7;
+  margin-bottom: var(--gutter-small);
+}
+
+/** =================================   My Work   ================================= */
 
 .work {
   margin: var(--gutter-huge) 0;
@@ -141,6 +243,14 @@ nav ul li:not(:last-child) {
 .list-img {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  gap: var(--gutter-x-small);
+}
+@media (max-width: 990px) {
+  .list-img {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
 
 .list-img .image {
@@ -148,41 +258,61 @@ nav ul li:not(:last-child) {
 }
 
 .list-img .image img {
-  width: 100%;
+  max-width: 100%;
+
   height: 100%;
-  box-shadow: 2px 5px 40px rgb(160, 160, 160);
+  box-shadow: 0px 0px 40px rgb(192, 192, 192, 0.8);
 }
 
-.list ul {
-  list-style-position: inside;
-  margin-right: var(--gutter-small);
+@media (max-width: 1250px) {
+  .list-img .image img {
+    max-width: 600px;
+  }
 }
-
+@media (max-width: 1090) {
+  .list-img .image img {
+    max-width: 500px;
+  }
+}
+@media (max-width: 1250px) {
+  .list-img .image img {
+    max-width: 600px;
+  }
+}
+@media (max-width: 990px) {
+  .list-img .image img {
+    max-width: 100%;
+    margin-bottom: var(--gutter-small);
+  }
+}
 .list h3 {
   margin-bottom: var(--gutter-x-small);
 }
+.list ul {
+  list-style-position: inside;
+  /* margin-right: var(--gutter-small); */
+  margin-bottom: var(--gutter-small);
+}
+.list li {
+  line-height: 30px;
+}
 
+/** ===============================   Trusted  By =============================== */
 
-
-
-/* ===============================   trusted  by =============================== */
-
-
-.trusted-by{
+.trusted-by {
   margin: var(--gutter-huge) 0;
+  padding: var(--gutter-huge) 0;
   background-color: var(--background-color);
-  height: 700px;
+  /* height: 700px; */
   display: flex;
   align-items: center;
-  
 }
 
-.trusted-by .row h2{
-  margin: var(--gutter-small) 0;
-  /* padding: var(--gutter-small) 0; */
+.trusted-by .row h2 {
+  margin-bottom: var(--gutter-normal);
   text-align: center;
 }
-.trusted-logos{
+.trusted-logos {
   display: flex;
   gap: 90px;
   flex-wrap: wrap;
@@ -190,76 +320,109 @@ nav ul li:not(:last-child) {
   justify-content: center;
 }
 
-.trusted-logos > img{
+.trusted-logos > img {
   height: 45px;
   width: 160px;
   filter: grayscale(100%);
+  opacity: 75%;
+}
+@media (max-width: 690px) {
+  .trusted-logos > img {
+    height: 40px;
+    width: 140px;
+  }
 }
 
-
-
-
-
-
-/* =================================   testimonials  ============================ */
-.testimonials-section{
+/* *============================   Testimonials  ============================ */
+.testimonials-section {
   margin: var(--gutter-huge) 0;
-
 }
-.testimonials-section .row h2{
-  
+.testimonials-section .row h2 {
   margin-bottom: var(--gutter-small);
   /* padding: var(--gutter-normal) 0; */
   text-align: center;
 }
-.testimonial{
+.testimonial {
   display: flex;
   gap: 30px;
 }
-.reviews{
+@media (max-width: 1080px) {
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 980px) {
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.reviews {
   max-width: 600px;
   padding: var(--box-padding);
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
+  flex: 1 1 0;
   border: var(--box-border);
   box-shadow: 0 1rem 2rem rgb(0 0 0 / 7%);
 }
-.reviews > img{
-  height: 200px;
-  width: 200px;
+@media (max-width: 1080px) {
+  .reviews {
+    max-width: 700px;
+  }
+}
+@media (max-width: 1080px) {
+  .reviews {
+    max-width: 700px;
+  }
+}
+@media (max-width: 980px) {
+  .reviews {
+    max-width: 630px;
+  }
+}
+.reviews > img {
+  height: 130px;
+  width: 130px;
   margin: var(--gutter-x-small);
   border-radius: 50%;
 }
-.reviews > h3{
-  /* margin: var(--gutter-x-small); */
 
+@media (max-width: 680px) {
+  .reviews > img {
+    height: 180px;
+    width: 180px;
+  }
 }
 
-.reviews > h4{
-  font-weight: 500;
+.reviews > h3 {
+  font-size: var(--large-text);
 }
-.reviews > p{
+.reviews > h4 {
+  font-weight: 400;
+  color: #7c7c7c;
+  margin-bottom: var(--gutter-x-small);
+}
+.reviews p {
   margin: var(--gutter-x-x-small) 0;
-  line-height: 30px;
 }
 
+/* *===========================   About Me   ============================== */
 
-/* ===========================   about Me   ============================== */
-
-
-.about-me{
+.about-me {
   margin: var(--gutter-huge) 0;
   align-items: center;
-
 }
-.about-me .row h2{
+.about-me .row h2 {
   margin-bottom: var(--gutter-small);
   /* padding: var(--gutter-normal) 0; */
   text-align: center;
 }
-.about{
+.about {
   max-width: 730px;
   margin: 0 auto;
   padding: var(--box-padding);
@@ -267,18 +430,51 @@ nav ul li:not(:last-child) {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border:  var(--box-border);
+  border: var(--box-border);
   box-shadow: 0 1rem 2rem rgb(0 0 0 / 7%);
+  object-fit: contain;
+}
+@media (max-width: 980px) {
+  .about {
+    max-width: 680px;
+  }
 }
 
-
-.about img{
+.about img {
   width: 300px;
   height: 300px;
-  margin: var(--gutter-x-small);
+  margin-bottom: var(--gutter-x-small);
   border-radius: 50%;
 }
 
-.about p{
+@media (max-width: 980px) {
+  .about img {
+    width: 250px;
+    height: 250px;
+  }
+}
+.about p {
   margin-bottom: var(--gutter-x-small);
+  font-weight: 300px;
+}
+
+/* *===========================       Footer        =========================== */
+footer {
+  background-color: rgb(22, 22, 22);
+  padding: var(--gutter-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: var(--gutter-x-small);
+}
+
+.icons img {
+  height: 35px;
+  cursor: pointer;
 }
