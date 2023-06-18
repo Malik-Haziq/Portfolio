@@ -1,3 +1,16 @@
+<!--
+  Greetings!
+
+  This delightful template has been meticulously crafted and brought to life by Syed Mohsin. It is generously shared with the world, inviting you to unleash your creativity and tailor it to your heart's content.
+-->
+
+<!-- For any inquiries or collaborations reach out to me at devsyedmohsin@gmail.com -->
+
+<!--
+  Embrace the guidance inscribed within the comments below to fashion an awe-inspiring portfolio of your own.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,199 +18,466 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js" defer></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <meta name="robots" content="index, follow" />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Jost:wght@300;400&family=Open+Sans&family=Varela+Round&display=swap"
-    rel="stylesheet" />
+  <!-- Read and update content attributes accordingly  -->
+
+  <meta name="description"
+    content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations." />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Syed Mohsin's Portfolio">
+  <meta itemprop="description"
+    content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+  <!-- Reference screenshot of updated site's header in place of content -->
+  <meta itemprop="image" content="assets/images/sharing-card.png">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://ossportfolio.netlify.app">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Malik Haziq's Portfolio">
+  <meta property="og:description"
+    content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+  <!-- Reference screenshot of updated site's header in content -->
+  <meta property="og:image" content="assets/images/sharing-card.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Syed Mohsin's Portfolio">
+  <meta name="twitter:description"
+    content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+  <!-- Reference screenshot of updated site's header in content -->
+  <meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+  <!-- Update favicon href attribute with image of yourself -->
+  <link rel="shortcut icon" href="assets/images/favicons.png" type="image/png" />
+
+  <!-- Preloading fonts for better performance -->
+
+  <link rel="preload" href="assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
+
   <link rel="stylesheet" href="style.css" />
-  <title>Portfolio by Malik Haziq</title>
+  <script src="script.js" defer></script>
+
+  <!-- Your name here -->
+  <title>Malik Haziq's Portfolio</title>
 </head>
 
 <body>
-  <header>
-    <div class="row">
-      <nav data-aos="fade-in">
-        <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#mywork">WORK</a></li>
-          <li><a href="mailto:malikhaziq153@gmail.com">CONTACT</a></li>
-        </ul>
-      </nav>
-      <div class="text">
-        <div>
-          <h1 data-aos="fade-up" data-aos-duration="1500">
-            Hi! I'm Malik Haziq
-          </h1>
-          <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
-            A front end web developer and interface designer —<br />
-            who builds UX rich, accessible & performant websites
-          </p>
-          <a href="mailto:malikhaziq153@gmail.com" class="btn btn-white" data-aos="fade-down" data-aos-delay="800"
-            data-aos-duration="3000">Need
-            Help? Get in touch</a>
+
+  <script>
+    const theme = localStorage.getItem("theme") || "dark";
+    document.body.classList.add(theme);
+  </script>
+
+  <header class="header">
+
+    <div class="menu-btn-container">
+      <div class="container">
+        <button class="menu-btn">menu</button>
+      </div>
+    </div>
+
+    <nav class="nav hidden">
+      <ol class="nav-items">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#work">My Work</a></li>
+        <li class="nav-item"><a href="#blog">See Blog</a></li>
+        <li class="nav-item"><a href="#skills">My Skills</a></li>
+        <li class="nav-item">
+          <a href="#contact" aria-data="last-focused">Contact</a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="container">
+      <div class="header-textbox">
+        <!-- Replace with your name and job title -->
+        <h1 class="h1">
+          Hi, I'm Malik Haziq<br />
+          Frontend Web Developer
+        </h1>
+
+        <!-- Add a small introductory paragraph about yourself -->
+        <p class="header-text">
+          A frontend software engineer and interface designer who builds UX
+          rich accessible and performant websites.
+        </p>
+
+        <div class="header-btns">
+          <a href="#contact" class="btn btn-cta">Hire me</a>
+          <a href="#work" class="btn btn-secondary">See my work</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ==================================    My  Work    ================================ -->
+  <main>
+    <section class="client">
+      <div class="container">
+        <h2 class="h2">Trusted by</h2>
+        <div class="logos">
+          <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
+          <div class="logo-group">
+            <img loading="lazy" src="assets/images/trusted-by/stripe.svg" alt="Ideacraft" class="logo hide to-top" />
 
-  <section class="work" id="mywork">
-    <div class="row">
-      <h2>My Work</h2>
-      <section class="list-img">
-        <div class="list" data-aos="fade-right">
-          <h3>My first UI design</h3>
-          <ul>
-            <li>A Task App</li>
-            <li>Ultimate Tasks</li>
-            <li>SMS Tasks Reminder</li>
-            <li>Confetti Explosion upon Task Completion stickly</li>
-            <li>Social Media Announcements</li>
-          </ul>
-          <a href="#" class="btn btn-black">Visit now &RightArrow;</a>
-        </div>
-        <div class="image">
-          <img src="./images/my work/first.png" alt="A task App" />
-        </div>
-      </section>
-      <section class="list-img">
-        <div class="list" data-aos="fade-right">
-          <h3>Code Academy</h3>
-          <ul>
-            <li>Qualified Teacher</li>
-            <li>Monthly PTM</li>
-            <li>We work to connect interested undergraduate students</li>
-            <li>Play group to M.A</li>
-            <li>Neat and Clean Environment</li>
-          </ul>
-          <a href="#" class="btn btn-black">Visit now &RightArrow;</a>
-        </div>
-        <div class="image">
-          <img src="./images/my work/second.png" alt="Code Academy" />
-        </div>
-      </section>
-      <section class="list-img">
-        <div class="list" data-aos="fade-right">
-          <h3>My web Presence</h3>
-          <ul>
-            <li>Great Development Over The World</li>
-            <li>Digital Marketing At Any Where</li>
-            <li>Our Community</li>
-            <li>Business On Web</li>
-            <li>Analytics is the systematic computational analysis</li>
-          </ul>
-          <a href="#" class="btn btn-black">Visit now &RightArrow;</a>
-        </div>
-        <div class="image">
-          <img src="./images/my work/third.png" alt="Web presence" />
-        </div>
-      </section>
-    </div>
-  </section>
+            <img loading="lazy" src="assets/images/trusted-by/datastax.svg" alt="Golden grid" class="logo" />
 
-  <!-- ------------------------------  Trusted by ------------------------------- -->
-  <section class="trusted-by">
-    <div class="row">
-      <h2>Trusted By</h2>
-      <section class="trusted-logos">
-        <img src="./images/trusted by/download (1).svg" alt="" data-aos="fade-in" />
-        <img src="./images/trusted by/download (2).svg" alt="" data-aos="fade-in" data-aos-delay="200" />
-        <img src="./images/trusted by/download (3).svg" alt="" data-aos="fade-in" data-aos-delay="300" />
-        <img src="./images/trusted by/download (4).svg" alt="" data-aos="fade-in" data-aos-delay="400" />
-        <img src="./images/trusted by/download (5).svg" alt="" data-aos="fade-in" data-aos-delay="500" />
-        <img src="./images/trusted by/download.png" alt="" data-aos="fade-in" data-aos-delay="600" />
-        <img src="./images/trusted by/download.svg" alt="" data-aos="fade-in" data-aos-delay="700" />
-        <img src="./images/trusted by/typefox-580adb6cda29b9375cc1c436027ec5d2.svg" alt="" data-aos="fade-in"
-          data-aos-delay="800" />
-        <img src="./images/trusted by/idc-d088d7114610e30693aaa84c457d9e84.svg" alt="" data-aos="fade-in"
-          data-aos-delay="900" />
-      </section>
-    </div>
-  </section>
+            <img loading="lazy" src="assets/images/trusted-by/coke.svg" alt="Theia" class="logo hide to-bottom" />
+          </div>
+          <div class="logo-group">
+            <img loading="lazy" src="assets/images/trusted-by/gm.svg" alt="General motors" class="logo hide to-top" />
 
-  <!-- =================================   testimonials  ============================ -->
-
-  <section class="testimonials-section">
-    <div class="row">
-      <h2>Testimonials</h2>
-      <section class="testimonial">
-        <div class="reviews">
-          <img src=" ./images/testimonial/josef.jpg" alt="josef Krukenburg" />
-          <h3>Josef Krukenberg</h3>
-          <h4>Drupal Contributor</h4>
-          <p>
-            Working with Haziq was a great experience. His drive for clean
-            aesthetics and his open communication style helped us collaborate
-            closely on the solution. I appreciated him challenging my concept
-            and implementing a solution that performs well using Gatsby.js.
-            Nisar also performed API integration, design and frontend
-            development leading the project to success in a very agile and
-            quality appreciating manner.
-          </p>
+            <img loading="lazy" src="assets/images/trusted-by/shares.svg" alt="Chippy" class="logo" />
+            <img loading="lazy" src="assets/images/trusted-by/shopify.svg" alt="Shopify" class="logo hide to-bottom" />
+          </div>
+          <div class="logo-group">
+            <img loading="lazy" src="assets/images/trusted-by/agency-elevation.svg" alt="Agency elevation"
+              class="logo hide to-top" /><img loading="lazy" src="assets/images/trusted-by/gitlab.svg" alt="Ron jones"
+              class="logo" /><img loading="lazy" src="assets/images/trusted-by/duolingo.svg" alt="Mighty furniture's"
+              class="logo hide to-bottom" />
+          </div>
+          <div class="logo-group">
+            <img loading="lazy" src="assets/images/trusted-by/coyote.svg" alt="Bulls eye" class="logo hide to-top" />
+            <img loading="lazy" src="assets/images/trusted-by/astrato.svg" alt="Chippy" class="logo" />
+            <img loading="lazy" src="assets/images/trusted-by/mercado.svg" alt="Fastlane" class="logo hide to-bottom" />
+          </div>
         </div>
-        <div class="reviews">
-          <img src="./images/testimonial/nicholas-shook.jpg" alt="nicholas-shook" />
-          <h3>Nicholas Shook</h3>
-          <h4>Attorney, Software Developer</h4>
-          <p>
-            Haziq is a fantastic UI developer and engineer. He helped our
-            website become ARIA-compliant by enforcing accessibility standards
-            in a thorough, test-driven way. We appreciated his clear
-            communication and his awesome work product in our time spent
-            together. I highly recommend booking Nisar for UI needs.
-          </p>
+      </div>
+    </section>
+
+    <section class="work" aria-label="hidden">
+      <div class="container">
+        <h2 class="h2" id="work">Selected Work</h2>
+        <div class="work-boxes">
+          <!-- Update img src and alt attribute  -->
+
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <!-- Add your project title here -->
+              <h3 class="h3">SMS</h3>
+              <!-- Add small description of your project  -->
+
+              <p class="work-text">One-on-One Online Tutoring website </p>
+              <ol class="work-technologies">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Tailwind CSS</li>
+                <li>Javascript</li>
+                <li>PHP</li>
+              </ol>
+              <div class="work-links">
+                <!-- Add url of project in href attribute -->
+                <a href="https://sciencemathsmart.com" target="_blank" rel="noopener" class="link">Explore this
+                  project</a>
+
+                <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                <a href="https://github.com/Malik-Haziq/ScienceMathSmart" target="_blank" rel="noopener"
+                  title="Source code">
+                  <img src="assets/images/social-links/github.svg" alt="GitHub" loading="lazy" />
+                </a>
+              </div>
+            </div>
+            <!-- Update img src and alt attribute  -->
+            <picture class="work-img">
+              <img loading="lazy" src="assets/images/work/sms.PNG" alt="Science Math Smart" />
+            </picture>
+          </div>
         </div>
-      </section>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- =================================  About Me  ==================================== -->
+    <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
 
-  <section class="about-me" id="about">
-    <div class="row">
-      <h2>About Me</h2>
-      <section class="about">
-        <img src="./images/about/profile-pic.png" alt="Malik Haziq" />
-        <p>
-          My name is Malik Haziq I am a self-taught front end developer and
-          interface designer based in Lahore, Pakistan. I'm passionate about
-          accessibility, performance and elegant design and things that
-          usually make life easier for the users.
+    <section class="article">
+      <div class="container">
+        <h2 class="h2" id="blog">My Articles</h2>
+        <div class="article-boxes">
+          <article class="article-box featured-article">
+            <div class="article-textbox">
+              <div>
+                <h3 class="h3">
+                  Make your JavaScript code more efficient, readable, and maintainable.
+                </h3>
+                <p class="article-text">
+                  To make JavaScript code more efficient, readable, and maintainable, here are some best practices and
+                  techniques you can
+                  follow:
+                </p>
+              </div>
+              <div class="article-info">
+                <a href="https://dev.to/malikhaziq/make-your-javascript-code-more-efficient-readable-and-maintainable-3h12"
+                  class="link" target="_blank" rel="noopener">Continue reading</a>
+                <span class="reaction-count">
+                  <img src="./assets/images/heart-outline.svg" alt="heart" />
+                  412
+                </span>
+              </div>
+            </div>
+            <picture class="article-illustration">
+              <img src="assets/images/featured-blog.webp" alt="MacBook Pro" loading="lazy" />
+            </picture>
+          </article>
+          <article class="article-box">
+            <div class="article-textbox">
+              <div>
+                <h3 class="h4">Javascript new features that introduced in ECMAScript 2020.</h3>
+                <p class="article-text">
+                  ECMAScript 2020,introduced several new features to the JavaScript language.
+
+                </p>
+              </div>
+              <div class="article-info">
+                <a href="https://dev.to/malikhaziq/javascript-new-features-that-introduced-in-ecmascript-2020-2cop"
+                  class="link" target="_blank" rel="noopener">Continue reading</a>
+                <span class="reaction-count">
+                  <img src="./assets/images/heart-outline.svg" alt="heart" loading="lazy" />
+                  47
+                </span>
+              </div>
+            </div>
+          </article>
+          <article class="article-box">
+            <div class="article-textbox">
+              <div>
+                <h3 class="h4">
+                  10 APIs for your projects.
+                </h3>
+                <p class="article-text">
+                  Here are 10 popular APIs that you can consider incorporating into your projects:
+
+                </p>
+              </div>
+              <div class="article-info">
+                <a href="https://dev.to/malikhaziq/10-web-apis-for-your-projects-65o" class="link" target="_blank"
+                  rel="noopener">Continue reading</a>
+                <span class="reaction-count">
+                  <img src="./assets/images/heart-outline.svg" alt="heart" loading="lazy" />
+                  372
+                </span>
+              </div>
+            </div>
+          </article>
+          <article class="article-box">
+            <div class="article-textbox">
+              <div>
+                <h3 class="h4">HTML cool things.
+                  .</h3>
+                <div class="article-text">
+                  Here are some HTML tips and tricks that people usually don't know.
+
+                </div>
+              </div>
+              <div class="article-info">
+                <a href="https://dev.to/malikhaziq/html-tips-and-tricks-309d" class="link" target="_blank"
+                  rel="noopener">Continue reading</a>
+                <span class="reaction-count">
+                  <img loading="lazy" src="./assets/images/heart-outline.svg" alt="heart" />
+                  174
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+
+    <section class="skills">
+      <div class="container">
+        <h2 class="h2" id="skills">My Toolkit</h2>
+        <div class="skills-imgs">
+          <img src="assets/images/skills/html.png" alt="HTML" class="skills-img" loading="lazy" title="HTML">
+          <img src="assets/images/skills/css.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+          <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+          <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+          <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+          <img src="assets/images/skills/C++.png" alt="c++" class="skills-img" loading="lazy" title="c++">
+          <img src="assets/images/skills/sqlServer.png" alt="SQL" class="skills-img" loading="lazy" title="SQL">
+
+
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
+
+    <section class="recommendations container">
+      <h2 class="h2">Testimonials</h2>
+      <ol class="testimonials cards" tabindex="0">
+        <li class="testimonial card">
+          <blockquote class="testimonial-text">
+            Malik is a true professional with amazing talent. He is a creative
+            thinker, has his finger on the pulse of whats to come, and
+            absolutely one of the quickest and best problem solvers I have
+            ever met.
+          </blockquote>
+          <figure class="testimonial-author">
+            <img src="assets/images/testimonials/adam.png" alt="Adam Argalye" loading="lazy" />
+            <figcaption>
+              <h3 class="testimonial-author-name">Adam Argalye</h3>
+              <p class="testimonial-author-job">Engineer @Google</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="testimonial card">
+          <blockquote class="testimonial-text">
+            Malik is Swiss army knife developer. He's efficient across a
+            seriously wide array of technologies, languages, frameworks, and
+            development approaches. He codes at work and at home, passionately
+            gleaning and learning from the open source community.
+          </blockquote>
+          <figure class="testimonial-author">
+            <img src="assets/images/testimonials/val-head.png" alt="Val Head" loading="lazy" />
+            <figcaption>
+              <h3 class="testimonial-author-name">Val Head</h3>
+              <p class="testimonial-author-job">CEO @Engines</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="testimonial card">
+          <blockquote class="testimonial-text">
+            Malik is a talented artist. He is very experienced with various
+            media and can make any project you are working on look good. He is
+            easy to work with and is a self starter. I would work with Malik
+            again.
+          </blockquote>
+          <figure class="testimonial-author">
+            <img src="assets/images/testimonials/brian-hirsh.png" alt="Brian Hirsh" loading="lazy" />
+            <figcaption>
+              <h3 class="testimonial-author-name">Brian Hirsh</h3>
+              <p class="testimonial-author-job">Head @Zero-in</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="testimonial card">
+          <blockquote class="testimonial-text">
+            I have been Malik's project partner in numerous classes and I never
+            have to worry about him pulling his weight. Whenever we are
+            required to work in a group, I want Malik on my team. Reliable and
+            talented.An overall good guy with a passion for his interests.
+          </blockquote>
+          <figure class="testimonial-author">
+            <img src="assets/images/testimonials/rich-harris.png" alt="Rich Harris" loading="lazy" />
+            <figcaption>
+              <h3 class="testimonial-author-name">Rich Harris</h3>
+              <p class="testimonial-author-job">Creator of Svelte</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="testimonial card">
+          <blockquote class="testimonial-text">
+            Malik is a true professional with amazing talent. He is a creative
+            thinker, has his finger on the pulse of whats to come, and
+            absolutely one of the quickest and best problem solvers I have
+            ever met.
+          </blockquote>
+          <figure class="testimonial-author">
+            <img src="assets/images/testimonials/val-head.png" alt="Adam Argalye" loading="lazy" />
+            <figcaption>
+              <h3 class="testimonial-author-name">Val Head</h3>
+              <p class="testimonial-author-job">Engineer @Google</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="testimonial card">
+          <blockquote class="testimonial-text">
+            Malik is Swiss army knife developer. He's efficient across a
+            seriously wide array of technologies, languages, frameworks, and
+            development approaches. He codes at work and at home, passionately
+            gleaning and learning from the open source community.
+          </blockquote>
+          <figure class="testimonial-author">
+            <img src="assets/images/testimonials/rich-harris.png" alt="Val Head" loading="lazy" />
+            <figcaption>
+              <h3 class="testimonial-author-name">Rich Harris</h3>
+              <p class="testimonial-author-job">CEO @Engines</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ol>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <h2 class="h2" id="contact">Send Message</h2>
+        <div class="contact-content">
+          <div class="contact-textbox">
+            <!-- Please comment this component if you're not available for hire -->
+            <strong href="#" class="hire-alert">
+              <span class="indicator"></span>
+              Available for hire
+            </strong>
+            <p class="contact-text">
+              As a software engineer, I construct web interfaces and design
+              systems with a special love for accessibility and the
+              performance. I tend to code things from scratch and enjoy
+              bringing ideas to life.
+            </p>
+            <p class="contact-text">
+              I'm also an open-source developer, and in my spare time, I do
+              digital art with my iPad Pro.
+            </p>
+            <!-- Replace src with your signatures and name -->
+            <img src="assets/images/signature.png" alt="Syed Mohsin" class="signatures" loading="lazy" />
+          </div>
+          <form action="#" class="contact-form" netlify>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required inputmode="email" />
+            </div>
+            <div class="form-field">
+              <label for="message">How can I help you?</label>
+              <textarea name="message" id="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-cta">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Update href and src attributes -->
+        <nav>
+          <ol class="footer-links">
+            <li class="footer-link">
+              <a title="GitHub" href="https://github.com/Malik-Haziq" target="_blank" rel="noopener"><img loading="lazy"
+                  src="assets/images/social-links/github.svg" alt="GitHub" /></a>
+            </li>
+            <li class="footer-link">
+              <a title="Linkedin" href="https://www.linkedin.com/in/haziq-awan-b5233a231/" target="_blank"
+                rel="noopener"><img loading="lazy" src="assets/images/social-links/linkedin.svg" alt="Linkedin" /></a>
+            </li>
+            <li class="footer-link">
+              <a title="Twitter" href="https://twitter.com/MalikHaziq19" target="_blank" rel="noopener"><img
+                  loading="lazy" src="assets/images/social-links/twitter.svg" alt="Twitter" /></a>
+            </li>
+          </ol>
+        </nav>
+        <p class="footer-text">
+          &copy; 2023 - Template designed & developed by <a target="_blank" rel="noopener"
+            href="https://github.com/Malik-Haziq">Syed Mohsin.</a>
         </p>
-        <p>
-          I currently work for Gitpod and almost the entirety of the work that
-          I do is open source
-        </p>
-        <p>
-          Apart from sitting in front of Computer 🖥️ I like playing Cricket 🏏
-          and love spending time outdoors in Nature 🌴 where I take some
-          photographs 📷 you can see some of my recent shots on instagram.
-        </p>
-        <p>
-          Got something to say or need any kind of help please feel free to
-          reach out I'll try my best to respond.
-        </p>
-      </section>
+        <label class="theme-switch" for="theme-switch">
+          <span>Dark Theme</span>
+          <input type="checkbox" id="theme-switch" role="switch" />
+        </label>
+      </div>
     </div>
-  </section>
-  <footer>
-    <div class="icons">
-      <a href="https://www.instagram.com/malikhaziq153/"><img src="./images/icons/black-instagram.svg"
-          alt="instagram" /></a>
-      <a href="https://www.facebook.com/haziq.hussain.585"><img src="./images/icons/facebook-square.svg"
-          alt="facebook" /></a>
-      <a href="https://github.com/Malik-Haziq"><img src="./images/icons/github.svg" alt="Github" /></a>
-      <a href="https://www.linkedin.com/in/malik-haziq-b5233a231/"><img src="./images/icons/linkedin-square.svg"
-          alt="Linked in" /></a>
-      <a href="https://twitter.com/MalikHaziq19"><img src="./images/icons/twitter-square.svg" alt="Twitter" /></a>
-
-    </div>
-    <p>&copy; 2023. Crafted within Lahore by Haziq.</p>
   </footer>
 </body>
 
