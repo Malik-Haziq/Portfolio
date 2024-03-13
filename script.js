@@ -59,15 +59,15 @@ workEls.forEach((workEl) => {
 
 // Shiny hover effect on cards that follows mouse
 
-const cards = document.querySelector(".cards");
+// const cards = document.querySelector(".cards");
 
-cards.addEventListener("mousemove", (e) => {
-  if (e.target.classList.contains("card")) {
-    const { x, y } = e.target.getBoundingClientRect();
-    e.target.style.setProperty("--x", `${e.clientX - x}px`);
-    e.target.style.setProperty("--y", `${e.clientY - y}px`);
-  }
-});
+// cards.addEventListener("mousemove", (e) => {
+//   if (e.target.classList.contains("card")) {
+//     const { x, y } = e.target.getBoundingClientRect();
+//     e.target.style.setProperty("--x", `${e.clientX - x}px`);
+//     e.target.style.setProperty("--y", `${e.clientY - y}px`);
+//   }
+// });
 
 // Toggle theme and store user preferred theme for future
 
