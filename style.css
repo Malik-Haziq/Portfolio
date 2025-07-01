@@ -907,35 +907,44 @@ body.dark .work-links img {
 /* --------------------------------- */
 /* ----- Testimonials -----*/
 /* --------------------------------- */
-
 .testimonials {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--gutter-small);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
   margin-block-start: var(--gutter-x-large);
-  max-inline-size: var(--site-max-width);
-  margin-inline: auto;
-  padding-block-end: var(--gutter-large);
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
   list-style-type: none;
+  background-image: linear-gradient(
+    rgba(88, 88, 88, 0.297),
+    rgba(214, 214, 214, 0.082)
+  );
+}
+
+@media (max-width: 1100px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 645px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
 }
 
 .testimonial {
-  scroll-snap-align: start;
-  max-inline-size: 475px;
-  min-inline-size: 475px;
-  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
   padding: var(--gutter-small);
-  background-color: var(--bg-color-secondary);
-  border-radius: var(--gutter-nano);
+  background-color: var(--bg-color-primary);
 }
 
 .testimonial-text {
+  font-size: var(--text-small);
   margin-block-end: var(--gutter-x-small);
 }
 
 .testimonial-author {
+  margin-block-start: auto;
   display: flex;
   align-items: center;
   gap: var(--gutter-micro);
@@ -954,6 +963,7 @@ body.dark .work-links img {
   block-size: 52px;
   inline-size: 52px;
   border-radius: 50%;
+  background-color: var(--bg-color-secondary);
 }
 
 /* --------------------------------- */
@@ -1177,13 +1187,12 @@ body.light .signatures {
   list-style-type: none;
 }
 
-.email{
-  transition: .5s;
+.email {
+  transition: 0.5s;
 }
 
-.email:hover{
+.email:hover {
   color: var(--important);
-
 }
 @media (max-width: 1040px) {
   .footer-links {
