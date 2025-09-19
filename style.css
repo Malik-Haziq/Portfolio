@@ -729,6 +729,25 @@ body.dark .work-links img {
   filter: invert(1);
 }
 
+.explore-all-btn-container {
+  margin-block-start: var(--gutter-x-large);
+  text-align: center;
+}
+
+.explore-all-btn {
+  font-size: var(--text-medium);
+  padding: var(--gutter-micro) var(--gutter-small);
+  color: var(--important);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--gutter-nano);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+
+.explore-all-btn:hover {
+  border-color: var(--important);
+}
 /* Github icon */
 
 .work-links > a:last-child {
