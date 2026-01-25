@@ -567,6 +567,51 @@ body.light .header {
   }
 }
 
+.header-ai {
+  margin-block-start: var(--gutter-huge);
+  margin-block-end: var(--gutter-medium);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-ai-text {
+  margin-block-end: var(--gutter-micro);
+  display: block;
+}
+
+.header-ai-links {
+  display: flex;
+  gap: var(--gutter-micro);
+  list-style-type: none;
+}
+
+@media (max-width: 1040px) {
+  .header-ai-links {
+    gap: var(--gutter-micro);
+  }
+}
+
+@media (max-width: 400px) {
+  .header-ai-links {
+    justify-content: center;
+  }
+}
+
+.header-ai-link img {
+  block-size: 24px;
+  inline-size: 24px;
+  opacity: 60%;
+  transition: 0.2s;
+}
+
+.header-ai-link img:hover {
+  opacity: 100%;
+}
+body.dark .header-ai-link img {
+  filter: invert(1);
+}
+
 /* --------------------------------- */
 /* ----- Clients -----*/
 /* --------------------------------- */

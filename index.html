@@ -62,10 +62,10 @@
   <title>Malik Haziq's Portfolio</title>
 </head>
 
-<body>
+<body class="light">
 
   <script>
-    const theme = localStorage.getItem("theme") || "dark";
+    const theme = localStorage.getItem("theme") || "light";
     document.body.classList.add(theme);
   </script>
 
@@ -108,9 +108,31 @@
           <a href="#work" class="btn btn-secondary">See my work</a>
         </div>
 
-        <div>
-          <small>Request an AI summary of me</small>
-          <div>helo</div>
+        <div class="header-ai">
+          <small class="header-ai-text">Request an AI summary of me</small>
+          <ol class="header-ai-links">
+            <li class="header-ai-link">
+              <a title="Ask chatgpt about Malik Haziq" href="https://chatgpt.com/?q=Can%20you%20summarize%20Malik%20Haziq's%20experience%2C%20technical%20skills%2C%20portfolio%20projects%2C%20and%20what%20kind%20of%20roles%20and%20environment%20does%20he%20target%20for%3F" target="_blank" rel="noopener"><img loading="lazy"
+                  src="assets/images/social-links/chatgpt.svg" alt="Chatgpt" /></a>
+            </li>
+            <li class="header-ai-link">
+              <a title="Ask grok about Malik Haziq" href="https://grok.com/?q=Can%20you%20summarize%20Malik%20Haziq%27s%20experience%2C%20technical%20skills%2C%20portfolio%20projects%2C%20and%20what%20kind%20of%20roles%20and%20environment%20does%20he%20target%20for%3F" target="_blank"
+                rel="noopener"><img loading="lazy" src="assets/images/social-links/grok.svg" alt="grok" /></a>
+            </li>
+            <li class="header-ai-link">
+              <a title="Ask gemini about Malik Haziq" href="https://www.google.com/search?udm=50&source=searchlabs&q=Can%20you%20summarize%20Malik%20Haziq%27s%20experience%2C%20technical%20skills%2C%20portfolio%20projects%2C%20and%20what%20kind%20of%20roles%20and%20environment%20does%20he%20target%20for%3F" target="_blank" rel="noopener"><img
+                  loading="lazy" src="assets/images/social-links/gemini.svg" alt="gemini" /></a>
+            </li>
+            <li class="header-ai-link">
+              <a title="Ask claude about Malik Haziq" href="https://claude.ai/new?q=Can%20you%20summarize%20Malik%20Haziq%27s%20experience%2C%20technical%20skills%2C%20portfolio%20projects%2C%20and%20what%20kind%20of%20roles%20and%20environment%20does%20he%20target%20for%3F" target="_blank" rel="noopener"><img
+                  loading="lazy" src="assets/images/social-links/claude.svg" alt="claude"/></a>
+            </li>
+            </li>
+            <li class="header-ai-link">
+              <a title="Ask perplexity about Malik Haziq" href="https://www.perplexity.ai/search?q=Can%20you%20summarize%20Malik%20Haziq%27s%20experience%2C%20technical%20skills%2C%20portfolio%20projects%2C%20and%20what%20kind%20of%20roles%20and%20environment%20does%20he%20target%20for%3F" target="_blank" rel="noopener"><img
+                  loading="lazy" src="assets/images/social-links/perplexity.svg" alt="perplexity"/></a>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
