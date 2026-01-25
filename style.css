@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Mona Sans";
-  src: url("assets/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+  src:
+    url("assets/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
     url("assets/fonts/Mona-Sans.woff2") format("woff2-variations");
   font-display: swap;
   font-weight: 200 900;
@@ -20,11 +21,8 @@
   --text-medium: 1.275rem;
   --text-small: 1.125rem;
 
-  --gradient-brand: radial-gradient(
-      at 60% 31%,
-      rgb(255, 131, 139) 0px,
-      transparent 50%
-    ),
+  --gradient-brand:
+    radial-gradient(at 60% 31%, rgb(255, 131, 139) 0px, transparent 50%),
     radial-gradient(at 48% 98%, rgba(0, 255, 166, 0.707) 0px, transparent 50%),
     radial-gradient(at 84% 67%, rgb(255, 129, 125) 0px, transparent 50%),
     radial-gradient(at 16% 47%, rgb(255, 90, 112) 0px, transparent 50%),
@@ -516,12 +514,13 @@ main {
 }
 
 body.dark .header {
-  background-image: linear-gradient(#0000008b, #000000e6),
-    url("assets/images/hero-bg.webp");
+  background-image:
+    linear-gradient(#0000008b, #000000e6), url("assets/images/hero-bg.webp");
 }
 
 body.light .header {
-  background-image: linear-gradient(#ffffffa2, #ffffffe6),
+  background-image:
+    linear-gradient(#ffffffa2, #ffffffe6),
     url("assets/images/hero-bg-light.webp");
 }
 
@@ -1204,6 +1203,12 @@ body.light .signatures {
   display: flex;
   gap: var(--gutter-small);
   list-style-type: none;
+}
+
+#contact-email {
+  text-decoration: none;
+  color: var(--sub);
+  font-weight: 500;
 }
 
 .email {
